@@ -11,6 +11,7 @@ import ctypes
 import sys
 
 SW_OPT_CUDA             = 'cuda'
+SW_OPT_IRIS             = 'iris'
 SW_OPT_KEEPTEMP         = 'keeptemp'
 SW_OPT_MPI              = 'mpi'
 SW_OPT_PRINTRULETREE    = 'printruletree'
@@ -32,6 +33,7 @@ class SWSolver:
         self._problem = problem
         self._opts = opts
         self._genCuda = self._opts.get(SW_OPT_CUDA, False)
+        self._genIRIS = self._opts.get(SW_OPT_IRIS, False)
         self._keeptemp = self._opts.get(SW_OPT_KEEPTEMP, False)
         self._withMPI = self._opts.get(SW_OPT_MPI, False)
         self._printRuleTree = self._opts.get(SW_OPT_PRINTRULETREE, False)
@@ -54,7 +56,10 @@ class SWSolver:
             libext = '.dll'
         else:
             libext = '.so'
-        sharedLibFullPath = os.path.join(self._libsDir, 'lib' + self._namebase + libext)         
+        if self._genIRIS:
+            sharedLibFullPath = os.path.join(self._libsDir, 'lib' + namebase + "_iris" + libext)
+        else:
+            sharedLibFullPath = os.path.join(self._libsDir, 'lib' + self._namebase + libext)
 
         if not os.path.exists(sharedLibFullPath):
             self._setupCFuncs(self._namebase)

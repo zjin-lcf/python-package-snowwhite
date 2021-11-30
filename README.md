@@ -78,10 +78,26 @@ The first time you run it, you will see output from the CMake/SPIRAL/C build, bu
 
 Some of the examples require additional arguments, and some options you can change.  Read through the examples for better understanding, and examine the generated intermediate files in your scratch directory.
 
+## Try an Example with IRIS
 
+Install IRIS in your system. 
+Please see https://github.com/ORNL/iris
 
+To run an example on a NVIDIA CUDA system:
+```
+cd ~/work/snowwhite/example-iris
+./1-setup-cuda.sh
+./2-build-cuda.sh
+./3-run-snowwhite.sh
+./4-run-iris.sh
+```
 
-
-
-
+To run an example on an AMD HIP system:
+```
+cd ~/work/snowwhite/example-iris
+./1-setup-hip.sh
+./2-build-hip.sh
+./3-run-snowwhite.sh
+./4-run-iris.sh
+```
 
