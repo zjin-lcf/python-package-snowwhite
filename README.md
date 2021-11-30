@@ -1,7 +1,7 @@
 Python Module for SnowWhite
 ===========================
 
-Please see #try-an-example-with-iris
+## Please see [Try an Example with IRIS](#try-an-example-with-iris)
 
 This is the prototype Python front end for the SPIRAL project's SnowWhite system, which compiles high-level specifications of numerical computations into hardware-specific optimized code.  It supports a variety of CPU's as well as Nvidia and AMD GPU's on systems running Linux, Windows, or MacOS.
 
