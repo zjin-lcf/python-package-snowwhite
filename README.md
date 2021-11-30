@@ -1,6 +1,8 @@
 Python Module for SnowWhite
 ===========================
 
+Please see #try-an-example-with-iris
+
 This is the prototype Python front end for the SPIRAL project's SnowWhite system, which compiles high-level specifications of numerical computations into hardware-specific optimized code.  It supports a variety of CPU's as well as Nvidia and AMD GPU's on systems running Linux, Windows, or MacOS.
 
 SnowWhite was developed under the DARPA PAPPA (Performant Automation of Parallel Program Assembly) program.  The program focused on ways reduce the complexity of building software that takes advantage of the massive parallelism of advanced high-preformance computing systems.
@@ -83,7 +85,7 @@ Some of the examples require additional arguments, and some options you can chan
 Install IRIS in your system. 
 Please see https://github.com/ORNL/iris
 
-To run an example on a NVIDIA CUDA system:
+Running an example on a NVIDIA CUDA system:
 ```
 cd ~/work/snowwhite/example-iris
 ./1-setup-cuda.sh
@@ -92,7 +94,7 @@ cd ~/work/snowwhite/example-iris
 ./4-run-iris.sh
 ```
 
-To run an example on an AMD HIP system:
+Running an example on an AMD HIP system:
 ```
 cd ~/work/snowwhite/example-iris
 ./1-setup-hip.sh
